@@ -1,6 +1,10 @@
 {
-    "image": "mcr.microsoft.com/vscode/devcontainers/base:0-debian-11",
-    "extensions": ["dart-code.flutter", "Dart-Code.dart-code"],
-    "postCreateCommand": "bash -c 'curl https://sdk.flutter.dev/ | sh'",
-    "postStartCommand": "flutter pub get"
-}
+    "name": "Flutter Dev Container",
+    "image": "dart-lang/sdk",
+    "extensions": ["dart-code.dart-code", "dart-code.flutter"],
+    "settings": { 
+      "dart.sdkPath": "/usr/lib/dart",
+    },
+    "postCreateCommand": "flutter doctor",
+  }
+  
